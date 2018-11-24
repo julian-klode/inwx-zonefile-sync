@@ -34,7 +34,7 @@ def dns_item_to_record(dataset, item, dnsorigin, key):
 		record['prio'] = item.priority
 		record['type'] = 'SRV'
 	elif dataset.rdtype == dns.rdatatype.TXT:
-		record['content'] = " ".join([x.decode('ascii') for x in item.strings])
+		record['content'] = "".join([x.decode('ascii') for x in item.strings])
 		record['type'] = 'TXT'
 	elif dataset.rdtype == dns.rdatatype.CNAME:
 		record['content'] = dns_name_to_text(item.target, dnsorigin=dnsorigin)
