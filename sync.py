@@ -48,6 +48,9 @@ def dns_item_to_record(dataset, item, dnsorigin, key):
 	elif dataset.rdtype == dns.rdatatype.SSHFP:
 		record['content'] = item.to_text()
 		record['type'] = 'SSHFP'
+	elif dataset.rdtype == dns.rdatatype.CAA:
+		record['content'] = item.to_text()
+		record['type'] = 'CAA'
 	else:
 		raise Exception("Unknown item type: %r" % item)
 
