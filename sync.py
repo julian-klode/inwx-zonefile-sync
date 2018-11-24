@@ -8,7 +8,7 @@ import inwx.inwx
 import inwx.configuration
 import dns.zone
 
-NS = ['a.xnameserver.de', 'b.xnameserver.de', 'c.xnameserver.de', 'd.xnameserver.org', 'e.xnameserver.biz']
+NS = ['ns.inwx.de', 'ns2.inwx.de', 'ns3.inwx.eu', 'ns4.inwx.com', 'ns5.inwx.net']
 
 def dns_name_to_text(name, dnsorigin):
 	return name.derelativize(origin=dnsorigin).to_text().rstrip('.')
